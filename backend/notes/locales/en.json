@@ -1,0 +1,33 @@
+{
+  "title": "Notes",
+  "description": "Digital sticky notes that will never fall off the fridge.",
+  "modals": {
+    "subject": {
+      "create": "Create Subject",
+      "update": "Update Subject"
+    }
+  },
+  "buttons": {
+    "fileUpload": "Upload File",
+    "folderUpload": "Upload Folder"
+  },
+  "inputs": {
+    "subjectName": "Subject Name",
+    "subjectDescription": "Subject Description",
+    "subjectIcon": "Subject Icon"
+  },
+  "items": {
+    "note": "Note",
+    "subject": "Subject"
+  },
+  "empty": {
+    "note": {
+      "title": "No Notes Here",
+      "description": "It's time to upload some notes!"
+    },
+    "subject": {
+      "title": "No Subjects",
+      "description": "You haven't added any subjects yet. Click the button below to add one."
+    }
+  }
+}

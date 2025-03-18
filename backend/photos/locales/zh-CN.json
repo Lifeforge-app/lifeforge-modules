@@ -1,0 +1,60 @@
+{
+  "title": "照片",
+  "description": "记忆如此生动，它们几乎会从萤幕上跳出来。",
+  "sidebar": {
+    "favourites": "收藏夹",
+    "archive": "已封存",
+    "lockedFolder": "锁定资料夹",
+    "trash": "垃圾桶",
+    "allPhotos": "所有照片",
+    "viewAllAlbum": "查看所有相簿"
+  },
+  "modals": {
+    "album": {
+      "create": "建立相簿",
+      "rename": "更新相簿"
+    },
+    "addPhotosToAlbum": "添加 {{amount}} 张照片到相簿"
+  },
+  "buttons": {
+    "refresh": "重新整理",
+    "hidePhotosInAlbums": "隐藏相簿中的照片",
+    "copyLink": "复制连结",
+    "uploadPhotos": "上传照片",
+    "addToAlbum": "添加到相簿",
+    "setAsAlbumCover": "设为相簿封面",
+    "downloadAll": "全部下载",
+    "manageTags": "管理标签",
+    "editTags": "编辑标签"
+  },
+  "inputs": {
+    "albumName": "相簿名称"
+  },
+  "items": {
+    "photo": "照片",
+    "album": "相簿",
+    "tag": "标签"
+  },
+  "empty": {
+    "trash": {
+      "title": "垃圾桶是空的",
+      "description": "垃圾桶中未找到任何项目。"
+    },
+    "photos": {
+      "title": "没有照片",
+      "description": "您还没有添加任何照片。点击上面的按钮添加一个。"
+    },
+    "albums": {
+      "title": "没有相簿",
+      "description": "您还没有添加任何相簿。点击上面的按钮添加一个。"
+    },
+    "photosInAlbum": {
+      "title": "没有照片",
+      "description": "此相簿中没有照片。前往主页面添加一些。"
+    },
+    "albumResults": {
+      "title": "没有结果",
+      "description": "找不到相簿, 请尝试其他关键字。"
+    }
+  }
+}

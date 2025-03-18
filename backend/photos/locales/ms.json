@@ -1,0 +1,60 @@
+{
+  "title": "Foto",
+  "description": "Kenangan yang begitu jelas, seolah-olah melompat dari skrin.",
+  "sidebar": {
+    "favourites": "Kegemaran",
+    "archive": "Diarkibkan",
+    "lockedFolder": "Folder Terkunci",
+    "trash": "Sampah",
+    "allPhotos": "Semua Foto",
+    "viewAllAlbum": "Lihat Semua Album"
+  },
+  "modals": {
+    "album": {
+      "create": "Buat Album",
+      "rename": "Kemas Kini Album"
+    },
+    "addPhotosToAlbum": "Tambah {{amount}} foto ke album"
+  },
+  "buttons": {
+    "refresh": "Segarkan",
+    "hidePhotosInAlbums": "Sembunyikan Foto dalam Album",
+    "copyLink": "Salin Pautan",
+    "uploadPhotos": "Muat Naik Foto",
+    "addToAlbum": "Tambah ke Album",
+    "setAsAlbumCover": "Tetapkan sebagai Kulit Album",
+    "downloadAll": "Muat Turun Semua",
+    "manageTags": "Urus Tag",
+    "editTags": "Edit Tag"
+  },
+  "inputs": {
+    "albumName": "Nama Album"
+  },
+  "items": {
+    "photo": "Foto",
+    "album": "Album",
+    "tag": "Tag"
+  },
+  "empty": {
+    "trash": {
+      "title": "Sampah Kosong",
+      "description": "Tiada item ditemui dalam sampah."
+    },
+    "photos": {
+      "title": "Tiada Foto",
+      "description": "Anda belum menambah sebarang foto lagi. Klik butang di atas untuk menambah satu."
+    },
+    "albums": {
+      "title": "Tiada Album",
+      "description": "Anda belum menambah sebarang album lagi. Klik butang di atas untuk menambah satu."
+    },
+    "photosInAlbum": {
+      "title": "Tiada Foto",
+      "description": "Tiada foto dalam album ini. Pergi ke halaman utama untuk menambah beberapa."
+    },
+    "albumResults": {
+      "title": "Tiada Hasil",
+      "description": "Tiada album ditemui, sila cuba kata kunci lain."
+    }
+  }
+}

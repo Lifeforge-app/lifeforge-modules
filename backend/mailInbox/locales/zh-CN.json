@@ -1,0 +1,63 @@
+{
+  "title": "邮件收件箱",
+  "description": "在一个地方管理您的电子邮件收件箱。",
+  "sidebar": {
+    "inbox": "收件箱",
+    "starred": "加星",
+    "sent": "已发送",
+    "trash": "垃圾箱",
+    "allMails": "所有邮件",
+    "draft": "草稿",
+    "labels": "标签"
+  },
+  "buttons": {
+    "compose": "撰写"
+  },
+  "modals": {
+    "mail": {
+      "view": "查看邮件"
+    }
+  },
+  "headers": {
+    "inbox": "收件箱",
+    "starred": "加星",
+    "sent": "已发送",
+    "trash": "垃圾箱",
+    "allMails": "所有邮件",
+    "draft": "草稿",
+    "filteredMails": "过滤邮件"
+  },
+  "items": {
+    "mail": "邮件"
+  },
+  "empty": {
+    "inbox": {
+      "title": "没有邮件",
+      "description": "您的收件箱中没有邮件。"
+    },
+    "starred": {
+      "title": "没有加星邮件",
+      "description": "您没有加星邮件。"
+    },
+    "sent": {
+      "title": "没有已发送邮件",
+      "description": "您没有已发送邮件。"
+    },
+    "trash": {
+      "title": "没有已删除邮件",
+      "description": "您没有已删除邮件。"
+    },
+    "allMails": {
+      "title": "没有邮件",
+      "description": "您没有邮件。"
+    },
+    "draft": {
+      "title": "没有草稿邮件",
+      "description": "您没有草稿邮件。"
+    },
+    "filteredMails": {
+      "title": "没有邮件",
+      "description": "您没有邮件。"
+    }
+  }
+}

@@ -1,0 +1,59 @@
+{
+  "title": "机场",
+  "description": "查看世界各地机场的各种信息",
+  "modals": {
+    "notamDetails": "航行通告详情"
+  },
+  "buttons": {
+    "previousFlights": "前一航班",
+    "nextFlights": "下一航班",
+    "summarizeWithAi": "用AI总结",
+    "loadMore": "加载更多",
+    "viewRaw": "查看原始文本"
+  },
+  "items": {
+    "airport": "机场",
+    "region": "地区",
+    "country": "国家",
+    "continent": "大陆",
+    "allAirport": "所有机场"
+  },
+  "empty": {
+    "airports": {
+      "title": "没有结果",
+      "description": "找不到机场, 请尝试其他关键字。"
+    },
+    "countries": {
+      "title": "没有结果",
+      "description": "找不到国家, 请尝试其他关键字。"
+    },
+    "continents": {
+      "title": "没有结果",
+      "description": "找不到大陆, 请尝试其他关键字。"
+    },
+    "regions": {
+      "title": "没有结果",
+      "description": "找不到地区, 请尝试其他关键字。"
+    },
+    "section": {
+      "title": "部分空白",
+      "description": "这里还没有任何内容。"
+    },
+    "NOTAM": {
+      "title": "没有航行通告",
+      "description": "找不到相关航行通告。"
+    },
+    "radio": {
+      "title": "没有广播",
+      "description": "找不到相关航行通告。"
+    },
+    "runway": {
+      "title": "没有跑道",
+      "description": "找不到相关跑道。"
+    },
+    "METAR": {
+      "title": "没有METAR",
+      "description": "找不到相关METAR。"
+    }
+  }
+}

@@ -1,0 +1,63 @@
+{
+  "title": "郵件收件箱",
+  "description": "在一個地方管理您的電子郵件收件箱。",
+  "sidebar": {
+    "inbox": "收件箱",
+    "starred": "加星",
+    "sent": "已發送",
+    "trash": "垃圾箱",
+    "allMails": "所有郵件",
+    "draft": "草稿",
+    "labels": "標籤"
+  },
+  "buttons": {
+    "compose": "撰寫"
+  },
+  "modals": {
+    "mail": {
+      "view": "查看郵件"
+    }
+  },
+  "headers": {
+    "inbox": "收件箱",
+    "starred": "加星",
+    "sent": "已發送",
+    "trash": "垃圾箱",
+    "allMails": "所有郵件",
+    "draft": "草稿",
+    "filteredMails": "過濾郵件"
+  },
+  "items": {
+    "mail": "郵件"
+  },
+  "empty": {
+    "inbox": {
+      "title": "沒有郵件",
+      "description": "您的收件箱中沒有郵件。"
+    },
+    "starred": {
+      "title": "沒有加星郵件",
+      "description": "您沒有加星郵件。"
+    },
+    "sent": {
+      "title": "沒有已發送郵件",
+      "description": "您沒有已發送郵件。"
+    },
+    "trash": {
+      "title": "沒有已刪除郵件",
+      "description": "您沒有已刪除郵件。"
+    },
+    "allMails": {
+      "title": "沒有郵件",
+      "description": "您沒有郵件。"
+    },
+    "draft": {
+      "title": "沒有草稿郵件",
+      "description": "您沒有草稿郵件。"
+    },
+    "filteredMails": {
+      "title": "沒有郵件",
+      "description": "您沒有郵件。"
+    }
+  }
+}

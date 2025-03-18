@@ -1,0 +1,60 @@
+{
+  "title": "Photos",
+  "description": "Memories so vivid, they almost jump off the screen.",
+  "sidebar": {
+    "favourites": "Favorites",
+    "archive": "Archived",
+    "lockedFolder": "Locked Folder",
+    "trash": "Trash",
+    "allPhotos": "All Photos",
+    "viewAllAlbum": "View All Albums"
+  },
+  "modals": {
+    "album": {
+      "create": "Create Album",
+      "rename": "Update Album"
+    },
+    "addPhotosToAlbum": "Add {{amount}} photos to album"
+  },
+  "buttons": {
+    "refresh": "Refresh",
+    "hidePhotosInAlbums": "Hide Photos in Albums",
+    "copyLink": "Copy Link",
+    "uploadPhotos": "Upload Photos",
+    "addToAlbum": "Add to Album",
+    "setAsAlbumCover": "Set as Album Cover",
+    "downloadAll": "Download All",
+    "manageTags": "Manage Tags",
+    "editTags": "Edit Tags"
+  },
+  "inputs": {
+    "albumName": "Album Name"
+  },
+  "items": {
+    "photo": "Photo",
+    "album": "Album",
+    "tag": "Tag"
+  },
+  "empty": {
+    "trash": {
+      "title": "Trash is Empty",
+      "description": "No items found in the trash."
+    },
+    "photos": {
+      "title": "No Photos",
+      "description": "You haven't added any photos yet. Click the button above to add one."
+    },
+    "albums": {
+      "title": "No Albums",
+      "description": "You haven't added any albums yet. Click the button above to add one."
+    },
+    "photosInAlbum": {
+      "title": "No Photos",
+      "description": "There are no photos in this album. Go to the main page to add some."
+    },
+    "albumResults": {
+      "title": "No Results",
+      "description": "No albums found, please try other keywords."
+    }
+  }
+}

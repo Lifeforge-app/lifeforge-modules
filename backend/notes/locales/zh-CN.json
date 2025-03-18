@@ -1,0 +1,33 @@
+{
+  "title": "笔记",
+  "description": "永远不会从冰箱上掉下来的数位便利贴。",
+  "modals": {
+    "subject": {
+      "create": "创建主题",
+      "update": "更新主题"
+    }
+  },
+  "buttons": {
+    "fileUpload": "上传文件",
+    "folderUpload": "上传文件夹"
+  },
+  "inputs": {
+    "subjectName": "主题名称",
+    "subjectDescription": "主题描述",
+    "subjectIcon": "主题图标"
+  },
+  "items": {
+    "note": "笔记",
+    "subject": "主题"
+  },
+  "empty": {
+    "note": {
+      "title": "这里没有笔记",
+      "description": "是时候上传一些笔记了！"
+    },
+    "subject": {
+      "title": "没有主题",
+      "description": "您还没有添加任何主题。点击下面的按钮添加一个。"
+    }
+  }
+}

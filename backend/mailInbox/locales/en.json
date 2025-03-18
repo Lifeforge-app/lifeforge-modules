@@ -1,0 +1,63 @@
+{
+  "title": "Mail Inbox",
+  "description": "Manage your email inbox in one place.",
+  "sidebar": {
+    "inbox": "Inbox",
+    "starred": "Starred",
+    "sent": "Sent",
+    "trash": "Trash",
+    "allMails": "All Mails",
+    "draft": "Draft",
+    "labels": "Labels"
+  },
+  "buttons": {
+    "compose": "Compose"
+  },
+  "modals": {
+    "mail": {
+      "view": "View Mail"
+    }
+  },
+  "headers": {
+    "inbox": "Inbox",
+    "starred": "Starred",
+    "sent": "Sent",
+    "trash": "Trash",
+    "allMails": "All Mails",
+    "draft": "Draft",
+    "filteredMails": "Filtered Mails"
+  },
+  "items": {
+    "mail": "mail"
+  },
+  "empty": {
+    "inbox": {
+      "title": "No Mails",
+      "description": "You have no mails in your inbox."
+    },
+    "starred": {
+      "title": "No Starred Mails",
+      "description": "You have no starred mails."
+    },
+    "sent": {
+      "title": "No Sent Mails",
+      "description": "You have no sent mails."
+    },
+    "trash": {
+      "title": "No Trashed Mails",
+      "description": "You have no trashed mails."
+    },
+    "allMails": {
+      "title": "No Mails",
+      "description": "You have no mails."
+    },
+    "draft": {
+      "title": "No Draft Mails",
+      "description": "You have no draft mails."
+    },
+    "filteredMails": {
+      "title": "No Mails",
+      "description": "You have no mails."
+    }
+  }
+}

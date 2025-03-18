@@ -1,0 +1,63 @@
+{
+  "title": "Peti Mel",
+  "description": "Urus peti mel anda di satu tempat.",
+  "sidebar": {
+    "inbox": "Peti Masuk",
+    "starred": "Berbintang",
+    "sent": "Dihantar",
+    "trash": "Sampah",
+    "allMails": "Semua Mel",
+    "draft": "Draf",
+    "labels": "Label"
+  },
+  "buttons": {
+    "compose": "Tulis"
+  },
+  "modals": {
+    "mail": {
+      "view": "Lihat Mel"
+    }
+  },
+  "headers": {
+    "inbox": "Peti Masuk",
+    "starred": "Berbintang",
+    "sent": "Dihantar",
+    "trash": "Sampah",
+    "allMails": "Semua Mel",
+    "draft": "Draf",
+    "filteredMails": "Mel Ditapis"
+  },
+  "items": {
+    "mail": "Mel"
+  },
+  "empty": {
+    "inbox": {
+      "title": "Tiada Mel",
+      "description": "Anda tidak mempunyai mel dalam peti masuk anda."
+    },
+    "starred": {
+      "title": "Tiada Mel Berbintang",
+      "description": "Anda tidak mempunyai mel berbintang."
+    },
+    "sent": {
+      "title": "Tiada Mel Dihantar",
+      "description": "Anda tidak mempunyai mel yang dihantar."
+    },
+    "trash": {
+      "title": "Tiada Mel Dibuang",
+      "description": "Anda tidak mempunyai mel yang dibuang."
+    },
+    "allMails": {
+      "title": "Tiada Mel",
+      "description": "Anda tidak mempunyai mel."
+    },
+    "draft": {
+      "title": "Tiada Mel Draf",
+      "description": "Anda tidak mempunyai mel draf."
+    },
+    "filteredMails": {
+      "title": "Tiada Mel",
+      "description": "Anda tidak mempunyai mel."
+    }
+  }
+}

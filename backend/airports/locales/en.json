@@ -1,0 +1,59 @@
+{
+  "title": "Airports",
+  "description": "View various information about airports around the world",
+  "modals": {
+    "notamDetails": "NOTAM Details"
+  },
+  "buttons": {
+    "previousFlights": "Previous Flights",
+    "nextFlights": "Next Flights",
+    "summarizeWithAi": "Summarize with AI",
+    "loadMore": "Load More",
+    "viewRaw": "View Raw"
+  },
+  "items": {
+    "airport": "Airport",
+    "region": "Region",
+    "country": "Country",
+    "continent": "Continent",
+    "allAirport": "All Airports"
+  },
+  "empty": {
+    "airports": {
+      "title": "No Results",
+      "description": "No airports found, please try other keywords."
+    },
+    "countries": {
+      "title": "No Results",
+      "description": "No countries found, please try other keywords."
+    },
+    "continents": {
+      "title": "No Results",
+      "description": "No continents found, please try other keywords."
+    },
+    "regions": {
+      "title": "No Results",
+      "description": "No regions found, please try other keywords."
+    },
+    "section": {
+      "title": "Section Empty",
+      "description": "There is no content here yet."
+    },
+    "NOTAM": {
+      "title": "No NOTAM",
+      "description": "No relevant NOTAM found."
+    },
+    "radio": {
+      "title": "No Radio",
+      "description": "No relevant radio found."
+    },
+    "runway": {
+      "title": "No Runway",
+      "description": "No relevant runway found."
+    },
+    "METAR": {
+      "title": "No METAR",
+      "description": "No relevant METAR found."
+    }
+  }
+}

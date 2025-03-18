@@ -1,0 +1,59 @@
+{
+  "title": "Lapangan Terbang",
+  "description": "Lihat pelbagai maklumat tentang lapangan terbang di seluruh dunia",
+  "modals": {
+    "notamDetails": "Butiran NOTAM"
+  },
+  "buttons": {
+    "previousFlights": "Penerbangan Sebelumnya",
+    "nextFlights": "Penerbangan Seterusnya",
+    "summarizeWithAi": "Ringkaskan dengan AI",
+    "loadMore": "Muatkan Lagi",
+    "viewRaw": "Lihat Asal"
+  },
+  "items": {
+    "airport": "Lapangan Terbang",
+    "region": "Wilayah",
+    "country": "Negara",
+    "continent": "Benua",
+    "allAirport": "Semua Lapangan Terbang"
+  },
+  "empty": {
+    "airports": {
+      "title": "Tiada Keputusan",
+      "description": "Tiada lapangan terbang ditemui, sila cuba kata kunci lain."
+    },
+    "countries": {
+      "title": "Tiada Keputusan",
+      "description": "Tiada negara ditemui, sila cuba kata kunci lain."
+    },
+    "continents": {
+      "title": "Tiada Keputusan",
+      "description": "Tiada benua ditemui, sila cuba kata kunci lain."
+    },
+    "regions": {
+      "title": "Tiada Keputusan",
+      "description": "Tiada wilayah ditemui, sila cuba kata kunci lain."
+    },
+    "section": {
+      "title": "Bahagian Kosong",
+      "description": "Tiada kandungan di sini lagi."
+    },
+    "NOTAM": {
+      "title": "Tiada NOTAM",
+      "description": "Tiada NOTAM yang berkaitan ditemui."
+    },
+    "radio": {
+      "title": "Tiada Radio",
+      "description": "Tiada radio yang berkaitan ditemui."
+    },
+    "runway": {
+      "title": "Tiada Landasan",
+      "description": "Tiada landasan yang berkaitan ditemui."
+    },
+    "METAR": {
+      "title": "Tiada METAR",
+      "description": "Tiada METAR yang berkaitan ditemui."
+    }
+  }
+}

@@ -1,0 +1,33 @@
+{
+  "title": "Nota",
+  "description": "Nota digital yang tidak akan jatuh dari peti sejuk.",
+  "modals": {
+    "subject": {
+      "create": "Cipta Subjek",
+      "update": "Kemas Kini Subjek"
+    }
+  },
+  "buttons": {
+    "fileUpload": "Muat Naik Fail",
+    "folderUpload": "Muat Naik Folder"
+  },
+  "inputs": {
+    "subjectName": "Nama Subjek",
+    "subjectDescription": "Penerangan Subjek",
+    "subjectIcon": "Ikon Subjek"
+  },
+  "items": {
+    "note": "Nota",
+    "subject": "Subjek"
+  },
+  "empty": {
+    "note": {
+      "title": "Tiada Nota Di Sini",
+      "description": "Sudah tiba masanya untuk memuat naik beberapa nota!"
+    },
+    "subject": {
+      "title": "Tiada Subjek",
+      "description": "Anda belum menambah sebarang subjek lagi. Klik butang di bawah untuk menambah satu."
+    }
+  }
+}
