@@ -1,0 +1,72 @@
+{
+  "title": "Projects (M)",
+  "description": "Gradually take control of your large projects.",
+  "sidebar": {
+    "allProjects": "All Projects",
+    "starred": "Starred Projects",
+    "categories": "Categories",
+    "visibilities": "Visibilities",
+    "statuses": "Statuses",
+    "priorities": "Priorities",
+    "technologies": "Technologies",
+    "projectType": "Project Type"
+  },
+  "empty": {
+    "projects": {
+      "title": "No Projects Yet",
+      "description": "No projects available. Create a new project to get started!"
+    },
+    "statuses": "No statuses found",
+    "categories": "No categories found",
+    "visibilities": "No visibilities found",
+    "technologies": "No technologies found",
+    "priority": "No priorities found",
+    "lists": "No lists found",
+    "tags": "No tags found"
+  },
+  "modals": {
+    "project": {
+      "create": "Create Project",
+      "update": "Update Project"
+    },
+    "status": {
+      "create": "Create Status",
+      "update": "Update Status"
+    },
+    "visibility": {
+      "create": "Create Visibility",
+      "update": "Update Visibility"
+    },
+    "technology": {
+      "create": "Create Technology",
+      "update": "Update Technology"
+    },
+    "column": {
+      "create": "Create Column",
+      "update": "Update Column"
+    }
+  },
+  "inputs": {
+    "statusName": "Status Name",
+    "statusColor": "Status Color",
+    "statusIcon": "Status Icon",
+    "visibilityName": "Visibility Name",
+    "visibilityIcon": "Visibility Icon",
+    "technologyName": "Technology Name",
+    "technologyIcon": "Technology Icon",
+    "projectName": "Project Name",
+    "projectColor": "Project Color",
+    "projectIcon": "Project Icon",
+    "status": "Status",
+    "projectStatus": "Project Status",
+    "projectCategory": "Project Category",
+    "projectVisibility": "Project Visibility",
+    "projectTechnologies": "Project Technologies",
+    "columnName": "Column Name",
+    "columnIcon": "Column Icon",
+    "columnColor": "Column Color"
+  },
+  "items": {
+    "project": "Project"
+  }
+}

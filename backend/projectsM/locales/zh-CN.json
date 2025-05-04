@@ -1,0 +1,72 @@
+{
+  "title": "专案 (M)",
+  "description": "逐步掌控您的大型专案。",
+  "sidebar": {
+    "allProjects": "所有专案",
+    "starred": "已加星标的专案",
+    "categories": "分类",
+    "visibilities": "可见性",
+    "statuses": "状态",
+    "priorities": "优先级",
+    "technologies": "技术",
+    "projectType": "专案类型"
+  },
+  "empty": {
+    "projects": {
+      "title": "目前没有专案",
+      "description": "没有可用的专案。建立一个新专案来开始吧！"
+    },
+    "statuses": "未找到状态",
+    "categories": "未找到分类",
+    "visibilities": "未找到可见性",
+    "technologies": "未找到技术",
+    "priority": "未找到优先级",
+    "lists": "未找到清单",
+    "tags": "未找到标签"
+  },
+  "modals": {
+    "project": {
+      "create": "建立专案",
+      "update": "更新专案"
+    },
+    "status": {
+      "create": "建立状态",
+      "update": "更新状态"
+    },
+    "visibility": {
+      "create": "建立可见性",
+      "update": "更新可见性"
+    },
+    "technology": {
+      "create": "建立技术",
+      "update": "更新技术"
+    },
+    "column": {
+      "create": "建立栏位",
+      "update": "更新栏位"
+    }
+  },
+  "inputs": {
+    "statusName": "状态名称",
+    "statusColor": "状态颜色",
+    "statusIcon": "状态图示",
+    "visibilityName": "可见性名称",
+    "visibilityIcon": "可见性图示",
+    "technologyName": "技术名称",
+    "technologyIcon": "技术图示",
+    "projectName": "专案名称",
+    "projectColor": "专案颜色",
+    "projectIcon": "专案图示",
+    "status": "状态",
+    "projectStatus": "专案状态",
+    "projectCategory": "专案分类",
+    "projectVisibility": "专案可见性",
+    "projectTechnologies": "专案技术",
+    "columnName": "栏位名称",
+    "columnIcon": "栏位图示",
+    "columnColor": "栏位颜色"
+  },
+  "items": {
+    "project": "专案"
+  }
+}

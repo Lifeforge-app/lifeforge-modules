@@ -1,0 +1,72 @@
+{
+  "title": "專案 (M)",
+  "description": "逐步掌控您的大型專案。",
+  "sidebar": {
+    "allProjects": "所有專案",
+    "starred": "已加星標的專案",
+    "categories": "分類",
+    "visibilities": "可見性",
+    "statuses": "狀態",
+    "priorities": "優先級",
+    "technologies": "技術",
+    "projectType": "專案類型"
+  },
+  "empty": {
+    "projects": {
+      "title": "目前沒有專案",
+      "description": "沒有可用的專案。建立一個新專案來開始吧！"
+    },
+    "statuses": "未找到狀態",
+    "categories": "未找到分類",
+    "visibilities": "未找到可見性",
+    "technologies": "未找到技術",
+    "priority": "未找到優先級",
+    "lists": "未找到清單",
+    "tags": "未找到標籤"
+  },
+  "modals": {
+    "project": {
+      "create": "建立專案",
+      "update": "更新專案"
+    },
+    "status": {
+      "create": "建立狀態",
+      "update": "更新狀態"
+    },
+    "visibility": {
+      "create": "建立可見性",
+      "update": "更新可見性"
+    },
+    "technology": {
+      "create": "建立技術",
+      "update": "更新技術"
+    },
+    "column": {
+      "create": "建立欄位",
+      "update": "更新欄位"
+    }
+  },
+  "inputs": {
+    "statusName": "狀態名稱",
+    "statusColor": "狀態顏色",
+    "statusIcon": "狀態圖示",
+    "visibilityName": "可見性名稱",
+    "visibilityIcon": "可見性圖示",
+    "technologyName": "技術名稱",
+    "technologyIcon": "技術圖示",
+    "projectName": "專案名稱",
+    "projectColor": "專案顏色",
+    "projectIcon": "專案圖示",
+    "status": "狀態",
+    "projectStatus": "專案狀態",
+    "projectCategory": "專案分類",
+    "projectVisibility": "專案可見性",
+    "projectTechnologies": "專案技術",
+    "columnName": "欄位名稱",
+    "columnIcon": "欄位圖示",
+    "columnColor": "欄位顏色"
+  },
+  "items": {
+    "project": "專案"
+  }
+}

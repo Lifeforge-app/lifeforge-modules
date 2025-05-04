@@ -1,0 +1,72 @@
+{
+  "title": "Projek (M)",
+  "description": "Ambil alih projek besar anda secara beransur-ansur.",
+  "sidebar": {
+    "allProjects": "Semua Projek",
+    "starred": "Projek Berbintang",
+    "categories": "Kategori",
+    "visibilities": "Keterlihatan",
+    "statuses": "Status",
+    "priorities": "Keutamaan",
+    "technologies": "Teknologi",
+    "projectType": "Jenis Projek"
+  },
+  "empty": {
+    "projects": {
+      "title": "Tiada Projek Lagi",
+      "description": "Tiada projek tersedia. Cipta projek baru untuk bermula!"
+    },
+    "statuses": "Tiada status ditemui",
+    "categories": "Tiada kategori ditemui",
+    "visibilities": "Tiada keterlihatan ditemui",
+    "technologies": "Tiada teknologi ditemui",
+    "priority": "Tiada keutamaan ditemui",
+    "lists": "Tiada senarai ditemui",
+    "tags": "Tiada tag ditemui"
+  },
+  "modals": {
+    "project": {
+      "create": "Cipta Projek",
+      "update": "Kemaskini Projek"
+    },
+    "status": {
+      "create": "Cipta Status",
+      "update": "Kemaskini Status"
+    },
+    "visibility": {
+      "create": "Cipta Keterlihatan",
+      "update": "Kemaskini Keterlihatan"
+    },
+    "technology": {
+      "create": "Cipta Teknologi",
+      "update": "Kemaskini Teknologi"
+    },
+    "column": {
+      "create": "Cipta Lajur",
+      "update": "Kemaskini Lajur"
+    }
+  },
+  "inputs": {
+    "statusName": "Nama Status",
+    "statusColor": "Warna Status",
+    "statusIcon": "Ikon Status",
+    "visibilityName": "Nama Keterlihatan",
+    "visibilityIcon": "Ikon Keterlihatan",
+    "technologyName": "Nama Teknologi",
+    "technologyIcon": "Ikon Teknologi",
+    "projectName": "Nama Projek",
+    "projectColor": "Warna Projek",
+    "projectIcon": "Ikon Projek",
+    "status": "Status",
+    "projectStatus": "Status Projek",
+    "projectCategory": "Kategori Projek",
+    "projectVisibility": "Keterlihatan Projek",
+    "projectTechnologies": "Teknologi Projek",
+    "columnName": "Nama Lajur",
+    "columnIcon": "Ikon Lajur",
+    "columnColor": "Warna Lajur"
+  },
+  "items": {
+    "project": "Projek"
+  }
+}
