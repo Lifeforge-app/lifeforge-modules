@@ -1,12 +1,8 @@
 import { Icon } from '@iconify/react'
+import { encrypt } from '@utils/encryption'
+import { Button, TextInput } from 'lifeforge-ui'
 import { useEffect, useState } from 'react'
 import { toast } from 'react-toastify'
-
-import { Button, TextInput } from '@lifeforge/ui'
-
-import fetchAPI from '@utils/fetchAPI'
-
-import { encrypt } from '../../../../../core/security/utils/encryption'
 
 function Mood({
   setStep,
@@ -30,6 +26,7 @@ function Mood({
   masterPassword: string
 }) {
   const [loading, setLoading] = useState(false)
+
   async function fetchSummarizedText() {
     setMood({
       text: '',
@@ -67,6 +64,7 @@ function Mood({
   useEffect(() => {
     if (mood.text !== '') {
       setLoading(false)
+
       return
     }
 
@@ -88,9 +86,8 @@ function Mood({
           <>
             <div className="w-full flex-1">
               <TextInput
-                darker
                 icon="tabler:mood-neutral"
-                name="Mood of the day"
+                label="Mood of the day"
                 namespace="modules.journal"
                 placeholder="How do you feel?"
                 setValue={value => {
@@ -99,10 +96,9 @@ function Mood({
                 value={mood.text}
               />
               <TextInput
-                darker
                 className="mt-4"
                 icon="uil:icons"
-                name="Emoji"
+                label="Emoji"
                 namespace="modules.journal"
                 placeholder="Emoji"
                 setValue={value => {
@@ -135,9 +131,9 @@ function Mood({
           Previous
         </Button>
         <Button
-          iconAtEnd
           disabled={mood.text.trim() === ''}
           icon="tabler:arrow-right"
+          iconPosition="end"
           onClick={() => {
             setStep(6)
           }}

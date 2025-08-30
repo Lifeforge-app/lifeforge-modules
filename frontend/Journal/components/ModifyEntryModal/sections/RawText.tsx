@@ -1,6 +1,5 @@
+import { Button } from 'lifeforge-ui'
 import { useEffect, useRef } from 'react'
-
-import { Button } from '@lifeforge/ui'
 
 function RawText({
   openType,
@@ -48,10 +47,10 @@ function RawText({
         />
       </div>
       <Button
-        iconAtEnd
         className="mt-6"
         disabled={rawText.trim() === ''}
         icon="tabler:arrow-right"
+        iconPosition="end"
         onClick={() => {
           if (rawText.trim() !== '') setStep(2)
         }}

@@ -1,7 +1,6 @@
 import { Icon } from '@iconify/react'
+import { Button, EmptyStateScreen } from 'lifeforge-ui'
 import { toast } from 'react-toastify'
-
-import { Button, EmptyStateScreen } from '@lifeforge/ui'
 
 function Photos({
   setStep,
@@ -28,6 +27,7 @@ function Photos({
 }) {
   async function uploadPhotos(e: React.ChangeEvent<HTMLInputElement>) {
     const files = e.target.files
+
     if (files === null) {
       return
     }
@@ -39,12 +39,14 @@ function Photos({
       .map(async file => {
         return await new Promise(resolve => {
           const reader = new FileReader()
+
           reader.onload = () => {
             const photo = {
               file,
               preview: reader.result as string,
               caption: ''
             }
+
             resolve(photo)
           }
           reader.readAsDataURL(file)
@@ -63,10 +65,12 @@ function Photos({
   function onUploadClick() {
     if (photos.length >= 50) {
       toast.error('You can only upload up to 50 photos')
+
       return
     }
 
     const input = document.createElement('input')
+
     input.type = 'file'
     input.multiple = true
     input.accept = 'image/*'
@@ -113,7 +117,7 @@ function Photos({
                 src={photo.preview}
               />
               <button
-                className="flex-center absolute left-0 top-0 size-full bg-red-900/50 opacity-0 transition-opacity duration-200 hover:opacity-100"
+                className="flex-center absolute top-0 left-0 size-full bg-red-900/50 opacity-0 transition-opacity duration-200 hover:opacity-100"
                 onClick={() => {
                   setPhotos(photos.filter(p => p.preview !== photo.preview))
                 }}
@@ -154,8 +158,8 @@ function Photos({
           Previous
         </Button>
         <Button
-          iconAtEnd
           icon="tabler:arrow-right"
+          iconPosition="end"
           onClick={() => {
             setStep(5)
           }}

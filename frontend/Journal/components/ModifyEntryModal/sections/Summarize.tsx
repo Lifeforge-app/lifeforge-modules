@@ -1,12 +1,8 @@
 import { Icon } from '@iconify/react'
+import { encrypt } from '@utils/encryption'
+import { Button } from 'lifeforge-ui'
 import { useEffect, useRef, useState } from 'react'
 import { toast } from 'react-toastify'
-
-import { Button } from '@lifeforge/ui'
-
-import fetchAPI from '@utils/fetchAPI'
-
-import { encrypt } from '../../../../../core/security/utils/encryption'
 
 function Summarize({
   setStep,
@@ -22,6 +18,7 @@ function Summarize({
   masterPassword: string
 }) {
   const [loading, setLoading] = useState(false)
+
   const textAreaRef = useRef<HTMLTextAreaElement>(null)
 
   function updateTextAreaHeight() {
@@ -66,6 +63,7 @@ function Summarize({
     if (summarizedText !== '') {
       setLoading(false)
       updateTextAreaHeight()
+
       return
     }
 
@@ -121,9 +119,9 @@ function Summarize({
           Previous
         </Button>
         <Button
-          iconAtEnd
           disabled={summarizedText?.trim() === ''}
           icon="tabler:arrow-right"
+          iconPosition="end"
           onClick={() => {
             setStep(4)
           }}

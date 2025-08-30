@@ -1,12 +1,11 @@
 import { Icon } from '@iconify/react'
+import { Button } from 'lifeforge-ui'
 import moment from 'moment'
 import { useState } from 'react'
 import Markdown from 'react-markdown'
 import Zoom from 'react-medium-image-zoom'
 
-import { Button } from '@lifeforge/ui'
-
-import CustomZoomContent from '../../IdeaBox/components/Ideas/components/IdeaAndFolderList/components/IdeaEntry/components/CustomZoomContent'
+import CustomZoomContent from '@apps/IdeaBox/pages/Ideas/components/IdeaAndFolderList/components/IdeaEntry/components/CustomZoomContent'
 
 function JournalView({
   date,
@@ -17,7 +16,7 @@ function JournalView({
   rawText,
   photos
 }: {
-  date: string
+  date: Date | null
   title: string
   mood: { text: string; emoji: string }
   cleanedUpText: string
@@ -26,9 +25,10 @@ function JournalView({
   photos: Array<{ preview: string }> | string[]
 }) {
   const [viewRaw, setViewRaw] = useState(false)
+
   return (
     <>
-      <div className="flex-between items-end! mb-6 mt-4 flex">
+      <div className="flex-between mt-4 mb-6 flex items-end!">
         <div className="flex flex-col gap-2">
           <span className="text-bg-500 text-lg font-medium">
             {moment(date).format('MMMM Do, YYYY')} - {mood.emoji} {mood.text}
@@ -38,19 +38,20 @@ function JournalView({
           </h2>
         </div>
       </div>
-      <p className="mb-6 text-lg">
-        <span className="text-5xl font-semibold uppercase">
+      <p className="text-bg-600 dark:text-bg-400 mb-6 text-lg tracking-wide">
+        <span className="text-bg-800 dark:text-bg-100 text-5xl font-semibold uppercase">
           {summarizedText[0]}
         </span>
         {summarizedText.slice(1)}
       </p>
-      <hr className="border-bg-500 mb-6" />
-      <Markdown className="prose max-w-full!">{cleanedUpText}</Markdown>
-
+      <hr className="border-bg-200 dark:border-bg-800 mb-6" />
+      <div className="prose max-w-full!">
+        <Markdown>{cleanedUpText}</Markdown>
+      </div>
       <Button
-        iconAtEnd
-        className="mt-6"
+        className="mt-6 w-full"
         icon={viewRaw ? 'tabler:chevron-up' : 'tabler:chevron-down'}
+        iconPosition="end"
         variant="plain"
         onClick={() => {
           setViewRaw(!viewRaw)
@@ -58,10 +59,12 @@ function JournalView({
       >
         {viewRaw ? 'Hide' : 'Show'} Raw
       </Button>
-      {viewRaw && <p className="text-bg-500 mt-6">{rawText}</p>}
+      {viewRaw && (
+        <p className="text-bg-500 mt-6 whitespace-pre-wrap">{rawText}</p>
+      )}
       {photos.length > 0 && (
         <>
-          <hr className="border-bg-500 my-6" />
+          <hr className="border-bg-200 dark:border-bg-800 my-6" />
           <h3 className="flex items-center gap-2 text-2xl font-semibold">
             <Icon className="size-6" icon="tabler:photo" />
             <span>

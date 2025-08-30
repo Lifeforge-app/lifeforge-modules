@@ -1,14 +1,12 @@
+import { encrypt } from '@utils/encryption'
+import type forgeAPI from '@utils/forgeAPI'
 import clsx from 'clsx'
+import { DateInput, ModalHeader, ModalWrapper, TextInput } from 'lifeforge-ui'
 import { useEffect, useRef, useState } from 'react'
 import { useTranslation } from 'react-i18next'
 import { toast } from 'react-toastify'
+import type { InferOutput } from 'shared'
 
-import { DateInput, ModalHeader, ModalWrapper, TextInput } from '@lifeforge/ui'
-
-import fetchAPI from '@utils/fetchAPI'
-
-import { encrypt } from '../../../../core/security/utils/encryption'
-import { type IJournalEntry } from '../../interfaces/journal_interfaces'
 import Cleanup from './sections/Cleanup'
 import Mood from './sections/Mood'
 import Photos from './sections/Photos'
@@ -16,24 +14,31 @@ import RawText from './sections/RawText'
 import Review from './sections/Review'
 import Summarize from './sections/Summarize'
 
-function ModifyJournalEntryModal({
-  openType,
+function ModifyEntryModal({
   onClose,
-  existedData,
-  masterPassword
+  data: { openType, initialData, masterPassword }
 }: {
-  openType: 'create' | 'update' | null
   onClose: () => void
-  existedData: IJournalEntry | null
-  masterPassword: string
+  data: {
+    openType: 'create' | 'update'
+    initialData?: InferOutput<typeof forgeAPI.journal.entries.getById>
+    masterPassword: string
+  }
 }) {
   const { t } = useTranslation('modules.journal')
+
   const [step, setStep] = useState<number>(1)
-  const [date, setDate] = useState<string>(new Date().toISOString())
+
+  const [date, setDate] = useState<Date | null>(new Date())
+
   const [title, setTitle] = useState<string>('')
+
   const [rawText, setRawText] = useState<string>('')
+
   const [cleanedUpText, setCleanedUpText] = useState<string>('')
+
   const [summarizedText, setSummarizedText] = useState<string>('')
+
   const [photos, setPhotos] = useState<
     | Array<{
         file: File
@@ -41,7 +46,9 @@ function ModifyJournalEntryModal({
       }>
     | string[]
   >([])
+
   const [originalPhotosLength, setOriginalPhotosLength] = useState<number>(0)
+
   const [mood, setMood] = useState<{
     text: string
     emoji: string
@@ -49,7 +56,9 @@ function ModifyJournalEntryModal({
     text: '',
     emoji: ''
   })
+
   const [titleGenerationLoading, setTitleGenerationLoading] = useState(false)
+
   const ref = useRef<HTMLInputElement>(null)
 
   async function generateTitle() {
@@ -57,6 +66,7 @@ function ModifyJournalEntryModal({
 
     if (cleanedUpText === '') {
       toast.error('Please complete step 2 first')
+
       return
     }
 
@@ -83,35 +93,24 @@ function ModifyJournalEntryModal({
 
   useEffect(() => {
     setStep(1)
-    if (existedData !== null && openType === 'update') {
+
+    if (initialData && openType === 'update') {
       setTimeout(() => {
-        setTitle(existedData.title)
-        setRawText(existedData.raw)
-        setCleanedUpText(existedData.content)
-        setSummarizedText(existedData.summary)
-        setDate(existedData.date)
-        setPhotos(existedData.photos)
-        setMood(existedData.mood)
-        setOriginalPhotosLength(existedData.photos.length)
+        setTitle(initialData.title)
+        setRawText(initialData.raw)
+        setCleanedUpText(initialData.content)
+        setSummarizedText(initialData.summary)
+        setDate(new Date(initialData.date))
+        setPhotos(initialData.photos)
+        setMood(initialData.mood)
+        setOriginalPhotosLength(initialData.photos.length)
       }, 500)
-    } else {
-      setTitle('')
-      setRawText('')
-      setCleanedUpText('')
-      setSummarizedText('')
-      setDate(new Date().toISOString())
-      setPhotos([])
-      setMood({
-        text: '',
-        emoji: ''
-      })
-      setOriginalPhotosLength(0)
     }
-  }, [existedData, openType])
+  }, [initialData, openType])
 
   return (
     <ModalWrapper
-      className="md:min-w-[40vw]! h-max"
+      className="h-max md:min-w-[40vw]!"
       isOpen={openType !== null}
       modalRef={ref}
     >
@@ -125,30 +124,25 @@ function ModifyJournalEntryModal({
         onClose={onClose}
       />
       <DateInput
-        darker
-        date={date}
-        hasMargin={false}
         icon="tabler:calendar"
-        modalRef={ref}
-        name="Date"
+        label="Date"
         namespace="modules.journal"
-        setDate={setDate}
+        setValue={setDate}
+        value={date}
       />
       <TextInput
-        darker
-        actionButtonIcon={
-          titleGenerationLoading ? 'svg-spinners:180-ring' : 'mage:stars-c'
-        }
+        actionButtonProps={{
+          icon: 'mage:stars-c',
+          loading: titleGenerationLoading,
+          onClick: generateTitle
+        }}
         className="mt-4"
         icon="tabler:file-text"
-        name="Journal Title"
+        label="Journal Title"
         namespace="modules.journal"
         placeholder="A Beautiful Day"
         setValue={setTitle}
         value={title}
-        onActionButtonClick={() => {
-          generateTitle().catch(console.error)
-        }}
       />
       <ul className="steps mt-6 shrink-0">
         {['Raw Text', 'Cleanup', 'Summarize', 'Photos', 'Mood', 'Review'].map(
@@ -255,7 +249,7 @@ function ModifyJournalEntryModal({
               <Review
                 cleanedUpText={cleanedUpText}
                 date={date}
-                id={existedData?.id ?? ''}
+                id={initialData?.id ?? ''}
                 masterPassword={masterPassword}
                 mood={mood}
                 openType={openType}
@@ -273,4 +267,4 @@ function ModifyJournalEntryModal({
   )
 }
 
-export default ModifyJournalEntryModal
+export default ModifyEntryModal

@@ -1,12 +1,8 @@
 import { Icon } from '@iconify/react'
+import { encrypt } from '@utils/encryption'
+import { Button } from 'lifeforge-ui'
 import { useEffect, useRef, useState } from 'react'
 import { toast } from 'react-toastify'
-
-import { Button } from '@lifeforge/ui'
-
-import fetchAPI from '@utils/fetchAPI'
-
-import { encrypt } from '../../../../../core/security/utils/encryption'
 
 function Cleanup({
   setStep,
@@ -22,6 +18,7 @@ function Cleanup({
   masterPassword: string
 }) {
   const [loading, setLoading] = useState(false)
+
   const textAreaRef = useRef<HTMLTextAreaElement>(null)
 
   function updateTextAreaHeight() {
@@ -66,6 +63,7 @@ function Cleanup({
     if (cleanedUpText !== '') {
       setLoading(false)
       updateTextAreaHeight()
+
       return
     }
 
@@ -121,9 +119,9 @@ function Cleanup({
           Previous
         </Button>
         <Button
-          iconAtEnd
           disabled={cleanedUpText.trim() === ''}
           icon="tabler:arrow-right"
+          iconPosition="end"
           onClick={() => {
             setStep(3)
           }}

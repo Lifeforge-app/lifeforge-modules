@@ -1,43 +1,45 @@
 import { Icon } from '@iconify/react'
-import clsx from 'clsx'
+import { ContextMenu, ContextMenuItem, useModalStore } from 'lifeforge-ui'
 import moment from 'moment'
 
-import { HamburgerMenu, MenuItem } from '@lifeforge/ui'
-
-import useComponentBg from '@hooks/useComponentBg'
-
-import { type IJournalEntry } from '../../../interfaces/journal_interfaces'
+import type { JournalEntry } from '..'
+import JournalViewModal from '../../JournalViewModal'
 
 function JournalListItem({
   entry,
-  setCurrentViewingJournal,
-  setJournalViewModalOpen,
-  setDeleteJournalConfirmationModalOpen,
-  setExistedData,
-  updateEntry,
-  editLoading
+  masterPassword
 }: {
-  entry: IJournalEntry
-  setCurrentViewingJournal: React.Dispatch<React.SetStateAction<string | null>>
-  setJournalViewModalOpen: React.Dispatch<React.SetStateAction<boolean>>
-  setDeleteJournalConfirmationModalOpen: React.Dispatch<
-    React.SetStateAction<boolean>
-  >
-  setExistedData: React.Dispatch<React.SetStateAction<IJournalEntry | null>>
-  updateEntry: (id: string) => Promise<void>
-  editLoading: boolean
+  entry: JournalEntry
+  masterPassword: string
 }) {
-  const { componentBgWithHover, componentBgLighter } = useComponentBg()
+  const open = useModalStore(state => state.open)
+
+  async function updateEntry(id: string) {
+    // setEditLoading(true)
+    // try {
+    //   const challenge = await fetchAPI<string>(`journal/auth/challenge`)
+    //   const data = await fetchAPI<IJournalEntry>(
+    //     `journal/entries/get/${id}?master=${encodeURIComponent(
+    //       encrypt(masterPassword, challenge)
+    //  0   )}`
+    //   )
+    //   setExistedData(data)
+    //   setModifyEntryModalOpenType('update')
+    // } catch {
+    //   toast.error(t('fetch.fetchError'))
+    // } finally {
+    //   setEditLoading(false)
+    // }
+  }
 
   return (
     <button
-      className={clsx(
-        'shadow-custom w-full rounded-lg p-6 text-left',
-        componentBgWithHover
-      )}
+      className="shadow-custom component-bg-with-hover w-full rounded-lg p-6 text-left"
       onClick={() => {
-        setCurrentViewingJournal(entry.id)
-        setJournalViewModalOpen(true)
+        open(JournalViewModal, {
+          id: entry.id,
+          masterPassword
+        })
       }}
     >
       <div className="flex-between flex">
@@ -53,43 +55,30 @@ function JournalListItem({
         </div>
         <div className="flex items-center gap-2">
           {entry.photos.length > 0 && (
-            <span
-              className={clsx(
-                'text-bg-400 shadow-custom flex items-center gap-2 whitespace-nowrap rounded-full px-3 py-1 text-base font-medium',
-                componentBgLighter
-              )}
-            >
+            <span className="text-bg-400 shadow-custom component-bg-lighter flex items-center gap-2 rounded-full px-3 py-1 text-base font-medium whitespace-nowrap">
               <Icon className="size-5" icon="tabler:photo" />
               {entry.photos.length} photos
             </span>
           )}
-          <span
-            className={clsx(
-              'shadow-custom block whitespace-nowrap rounded-full px-3 py-1 text-base font-medium',
-              componentBgLighter
-            )}
-          >
+          <span className="shadow-custom component-bg-lighter block rounded-full px-3 py-1 text-base font-medium whitespace-nowrap">
             {entry.mood.emoji} {entry.mood.text}
           </span>
-          <HamburgerMenu>
-            <MenuItem
-              disabled={editLoading}
-              icon={editLoading ? 'svg-spinners:180-ring' : 'tabler:pencil'}
-              text="Edit"
+          <ContextMenu>
+            <ContextMenuItem
+              // disabled={editLoading}
+              // icon={editLoading ? 'svg-spinners:180-ring' : 'tabler:pencil'}
+              label="Edit"
               onClick={() => {
                 updateEntry(entry.id).catch(console.error)
               }}
             />
-            <MenuItem
-              isRed
+            <ContextMenuItem
+              dangerous
               icon="tabler:trash"
-              text="Delete"
-              onClick={() => {
-                setDeleteJournalConfirmationModalOpen(true)
-                setExistedData(entry)
-              }}
+              label="Delete"
+              onClick={() => {}}
             />
-          </HamburgerMenu>
+          </ContextMenu>
         </div>
       </div>
       <div className="text-bg-500 mt-4">{entry.content}</div>

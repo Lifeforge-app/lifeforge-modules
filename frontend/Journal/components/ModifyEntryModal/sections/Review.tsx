@@ -1,12 +1,9 @@
+import { encrypt } from '@utils/encryption'
+import { Button } from 'lifeforge-ui'
 import moment from 'moment'
 import { useState } from 'react'
 import { toast } from 'react-toastify'
 
-import { Button } from '@lifeforge/ui'
-
-import fetchAPI from '@utils/fetchAPI'
-
-import { encrypt } from '../../../../../core/security/utils/encryption'
 import JournalView from '../../JournalView'
 
 function Review({
@@ -24,7 +21,7 @@ function Review({
   openType
 }: {
   id: string
-  date: string
+  date: Date | null
   title: string
   setStep: React.Dispatch<React.SetStateAction<number>>
   rawText: string
@@ -53,9 +50,13 @@ function Review({
       const challenge = await fetchAPI<string>('journal/auth/challenge')
 
       const encryptedTitle = encrypt(title, masterPassword)
+
       const encryptedRaw = encrypt(rawText, masterPassword)
+
       const encryptedCleanedUp = encrypt(cleanedUpText, masterPassword)
+
       const encryptedSummarized = encrypt(summarizedText, masterPassword)
+
       const encryptedMood = encrypt(JSON.stringify(mood), masterPassword)
 
       const encryptedMaster = encrypt(masterPassword, challenge)
@@ -74,7 +75,9 @@ function Review({
       )
 
       const formData = new FormData()
+
       formData.append('data', encryptedEverything)
+
       if (photos.every(p => typeof p === 'object')) {
         photos.forEach(photo => {
           formData.append('files', photo.file)
@@ -120,9 +123,9 @@ function Review({
           Previous
         </Button>
         <Button
-          iconAtEnd
           disabled={summarizedText.trim() === ''}
           icon="tabler:arrow-right"
+          iconPosition="end"
           loading={loading}
           onClick={() => {
             onSubmit().catch(console.error)
